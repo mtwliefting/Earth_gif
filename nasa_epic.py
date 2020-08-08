@@ -3,7 +3,7 @@ import json
 import urllib.request as urllib2
 import imageio
 
-data = urllib2.urlopen('http://epic.gsfc.nasa.gov/api/images.php')
+data = urllib2.urlopen('http://epic.gsfc.nasa.gov/api/images.php',data=None)
 data = json.loads(data.read())
 
 with imageio.get_writer('~/Desktop/earth.gif', mode='I') as writer:
